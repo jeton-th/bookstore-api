@@ -50,7 +50,7 @@ GEM
     concurrent-ruby (1.1.5)
     crass (1.0.4)
     erubi (1.8.0)
-    faker (1.9.3)
+    faker (2.1.0)
       i18n (>= 0.7)
     ffi (1.11.1)
     globalid (0.4.2)
