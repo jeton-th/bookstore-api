@@ -7,7 +7,8 @@ class BooksController < ApplicationController
   end
 
   def create
-    Book.create(book_params)
+    book = Book.create(book_params)
+    render json: book
   end
 
   def destroy
