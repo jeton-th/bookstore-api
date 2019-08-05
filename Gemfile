@@ -20,6 +20,7 @@ gem 'puma', '~> 3.11'
 
 gem 'faker'
 gem 'rack-cors'
+gem 'rubocop-performance'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
