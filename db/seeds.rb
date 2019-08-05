@@ -1,13 +1,23 @@
 # frozen_string_literal: true
 
 # seeding
+
+categories = %w[
+  Action
+  Biography
+  History
+  Horror
+  Kids
+  Learning
+  Sci-F
+]
+
 100.times do |_n|
   title = Faker::Book.title
   author = Faker::Book.author
-  category = Faker::Book.genre
   Book.create!(
     title: title,
     author: author,
-    category: category
+    category: categories[rand(categories.size - 1)]
   )
 end
