@@ -13,6 +13,7 @@ class BooksController < ApplicationController
 
   def destroy
     Book.destroy(params[:id])
+    render json: Book.all
   end
 
   private
