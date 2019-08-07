@@ -6,6 +6,8 @@ class CreateBooks < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :author
       t.string :category
+      t.integer :chapter, default: 1
+      t.integer :progress, default: 0
 
       t.timestamps
     end
