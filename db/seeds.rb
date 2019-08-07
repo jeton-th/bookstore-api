@@ -9,7 +9,7 @@ categories = %w[
   Horror
   Kids
   Learning
-  Sci-F
+  Sci-Fi
 ]
 
 100.times do |_n|
