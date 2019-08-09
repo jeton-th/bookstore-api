@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2019_08_02_103848) do
     t.string "author"
     t.string "category"
     t.integer "chapter", default: 1
-    t.integer "progress", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

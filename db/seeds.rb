@@ -16,13 +16,11 @@ categories = %w[
   title = Faker::Book.title
   author = Faker::Book.author
   chapter = rand(1..20)
-  progress = chapter * 5
 
   Book.create!(
     title: title,
     author: author,
-    category: categories[rand(categories.size - 1)],
-    chapter: chapter,
-    progress: progress
+    category: categories[rand(categories.size)],
+    chapter: chapter
   )
 end
