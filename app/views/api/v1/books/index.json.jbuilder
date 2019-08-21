@@ -6,5 +6,6 @@ json.array! @books do |book|
   json.author book.author
   json.category book.category
   json.chapter book.chapter
-  json.pageCount @books.total_pages
 end
+
+json.array! [@books.total_pages]
