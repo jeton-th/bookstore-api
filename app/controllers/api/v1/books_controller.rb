@@ -5,16 +5,17 @@ module Api
     # BooksController
     class BooksController < ApplicationController
       def index
-        @books = Book.paginate(page: params[:page], per_page: 10).order(id: :asc)
+        @books = Book.paginate_results(params[:page])
       end
 
       def create
         @book = Book.create(book_params)
+        render 'api/v1/books/create'
       end
 
       def update
         @book = Book.find(params[:id])
-        @book if @book.update(book_params)
+        render 'api/v1/books/update' if @book.update(book_params)
       end
 
       def destroy
