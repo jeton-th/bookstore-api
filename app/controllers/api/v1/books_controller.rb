@@ -5,17 +5,25 @@ module Api
     # BooksController
     class BooksController < ApplicationController
       def index
-        render json: Book.all.order(id: :asc)
+        @books = Book.paginate_results(params[:page])
       end
 
       def create
-        book = Book.create(book_params)
-        render json: book
+        @book = Book.new(book_params)
+        if @book.save
+          render :create
+        else
+          render :error
+        end
       end
 
       def update
-        book = Book.find(params[:id])
-        render json: book if book.update(book_params)
+        @book = Book.find(params[:id])
+        if @book.update_attributes(book_params)
+          render :update
+        else
+          render :error
+        end
       end
 
       def destroy
@@ -25,7 +33,7 @@ module Api
       private
 
       def book_params
-        params.permit(:title, :author, :category, :chapter, :progress)
+        params.permit(:title, :author, :category, :chapter)
       end
     end
   end

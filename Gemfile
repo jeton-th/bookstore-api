@@ -19,8 +19,10 @@ gem 'puma', '~> 3.11'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'faker'
+gem 'jbuilder'
 gem 'rack-cors'
 gem 'rubocop-performance'
+gem 'will_paginate'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
