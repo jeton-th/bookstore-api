@@ -11,18 +11,18 @@ module Api
       def create
         @book = Book.new(book_params)
         if @book.save
-          render 'api/v1/books/create'
+          render :create
         else
-          render 'api/v1/books/error'
+          render :error
         end
       end
 
       def update
         @book = Book.find(params[:id])
         if @book.update_attributes(book_params)
-          render 'api/v1/books/update'
+          render :update
         else
-          render 'api/v1/books/error'
+          render :error
         end
       end
 
