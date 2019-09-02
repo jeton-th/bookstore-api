@@ -1,7 +1,7 @@
 # Bookstore API
 
 ## Summary
-This is a Rails API that serves a collection of books to the following front-end [project](https://github.com/1ba1/react-bookstore).
+This is a Rails API that serves a collection of books whose title begins with the letter 'A'.
 
 For this project we used the following Gems:
 * faker

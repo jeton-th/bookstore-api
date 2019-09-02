@@ -13,8 +13,8 @@ categories = %w[
 ]
 
 i = 0
-while i < 100
-  title = Faker::Book.title
+while i < 25
+  title = Faker::Book.unique.title
   author = Faker::Book.author
   chapter = rand(1..20)
 
