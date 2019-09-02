@@ -3,7 +3,7 @@
 # Book
 class Book < ApplicationRecord
   validates :title, presence: true, format: { with: /\AA.*\z/,
-                                              message: 'must start with "A".' }
+                                              message: 'must start with the capital letter A' }
   validates :author, presence: true
   validates :category, presence: true
   validates :chapter, numericality: { only_integer: true }
