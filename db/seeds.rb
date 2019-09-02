@@ -12,11 +12,15 @@ categories = %w[
   Sci-Fi
 ]
 
-100.times do |_n|
+i = 0
+while i < 100
   title = Faker::Book.title
   author = Faker::Book.author
   chapter = rand(1..20)
 
+  next unless title[0] == 'A'
+
+  i += 1
   Book.create!(
     title: title,
     author: author,
