@@ -21,7 +21,7 @@ After installation, run ruby -v to make sure Ruby installed correctly. Example:
 $ ruby -v
 ruby 2.6.2p47 (2019-03-13 revision 67232) [x86_64-linux]
 ```
-Also make sure that Rails is installed by running rails -v. Example:
+Also, make sure that Rails is installed by running rails -v. Example:
 
 ```
 $ rails -v
