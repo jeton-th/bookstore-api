@@ -12,7 +12,7 @@ module Api
                 .try(:authenticate, params['user']['password'])
 
         if @user
-          session[:user_id] = user.id
+          session[:user_id] = @user.id
         else
           render :error
         end
@@ -31,5 +31,5 @@ module Api
         render :logout
       end
     end
-end
+  end
 end

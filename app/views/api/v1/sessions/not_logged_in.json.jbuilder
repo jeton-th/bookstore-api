@@ -1,4 +1,3 @@
 # frozen_string_literal: true
 
-response = { logged_in: false }
-json.not_logged_in response
+json.logged_in false
