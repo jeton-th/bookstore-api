@@ -36,8 +36,13 @@ module BookstoreApi
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
-        resource '*', headers: :any, methods: %I[get post put delete options]
+        origins 'localhost:8080'
+        resource '*', headers: :any, methods: %I[get post put delete options], credentials: true
+      end
+
+      allow do
+        origins 'https://my-react-bookstore.herokuapp.com/'
+        resource '*', headers: :any, methods: %I[get post put delete options], credentials: true
       end
     end
   end

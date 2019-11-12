@@ -2,6 +2,8 @@
 
 # Book
 class Book < ApplicationRecord
+  belongs_to :user
+  
   validates :title, presence: true, format: { with: /\AA.*\z/,
                                               message: 'must start with the capital letter A' }
   validates :author, presence: true
