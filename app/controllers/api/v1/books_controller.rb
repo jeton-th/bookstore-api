@@ -4,12 +4,15 @@ module Api
   module V1
     # BooksController
     class BooksController < ApplicationController
+      include CurrentUserConcern
+
       def index
-        @books = Book.paginate_results(params[:page])
+        @books = @current_user.books.paginate_results(params[:page])
+        render :index
       end
 
       def create
-        @book = Book.new(book_params)
+        @book = @current_user.books.build(book_params)
         if @book.save
           render :create
         else
