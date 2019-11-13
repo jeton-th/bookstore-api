@@ -3,7 +3,7 @@
 # User model
 class User < ApplicationRecord
   has_many :books
-  
+
   has_secure_password
 
   validates_presence_of :email
