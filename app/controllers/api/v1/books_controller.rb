@@ -8,7 +8,6 @@ module Api
 
       def index
         @books = @current_user.books.paginate_results(params[:page])
-        render :index
       end
 
       def create

@@ -4,8 +4,6 @@ module Api
   module V1
     # RegistrationsController
     class RegistrationsController < ApplicationController
-      include CurrentUserConcern
-
       def create
         @user = User.create!(user_params)
 
