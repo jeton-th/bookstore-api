@@ -13,6 +13,7 @@ module Api
 
         if @user
           session[:user_id] = @user.id
+          render :login
         else
           render :error
         end

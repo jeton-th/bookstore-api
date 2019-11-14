@@ -1,3 +1,4 @@
 # frozen_string_literal: true
 
-json.logged_in true
+response = { logged_in: true, user: @current_user }
+json.response response
