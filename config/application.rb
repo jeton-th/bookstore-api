@@ -44,7 +44,7 @@ module BookstoreApi
       end
 
       allow do
-        origins 'herokuapp.com'
+        origins 'https://my-react-bookstore.herokuapp.com/'
         resource '*', headers: :any, methods: %I[get post put delete options], credentials: true
       end
     end
