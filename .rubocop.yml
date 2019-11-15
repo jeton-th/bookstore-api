@@ -12,7 +12,7 @@ Metrics/BlockLength:
 
 AllCops:
   Exclude:
-    - 'db/schema.rb'
+    - 'db/**/*.rb'
     - 'Gemfile'
     - 'Rakefile'
     - 'test/*'
