@@ -40,7 +40,12 @@ module BookstoreApi
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'
-        resource '*', headers: :any, methods: %I[get post put delete options], credentials: true
+        resource(
+          '*', 
+          headers: :any,
+          methods: %I[get patch put delete post options],
+          credentials: true
+        )
       end
     end
   end
