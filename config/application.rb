@@ -39,7 +39,7 @@ module BookstoreApi
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
+        origins 'https://my-react-bookstore.herokuapp.com/'
         resource(
           '*', 
           headers: :any,
