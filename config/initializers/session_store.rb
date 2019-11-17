@@ -1,7 +1,14 @@
 # frozen_string_literal: true
 
 if Rails.env == 'production'
-  Rails.application.config.session_store :cookie_store, key: '_session', same_site: :lax, secure: true, domain: 'https://rails-bookstore-api.herokuapp.com'
+  Rails.application.config.session_store :cookie_store,
+                                         key: '_session',
+                                         same_site: :lax,
+                                         secure: 'none',
+                                         domain: 'https://rails-bookstore-api.herokuapp.com'
 else
-  Rails.application.config.session_store :cookie_store, key: '_session', same_site: :lax, secure: true
+  Rails.application.config.session_store :cookie_store,
+                                         key: '_session',
+                                         same_site: 'none',
+                                         secure: true
 end
