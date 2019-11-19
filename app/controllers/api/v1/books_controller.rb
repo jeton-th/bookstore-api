@@ -36,7 +36,7 @@ module Api
       private
 
       def book_params
-        params.permit(:title, :author, :category, :chapter)
+        params.permit(:title, :author, :category, :chapter, :total_chapters)
       end
     end
   end
