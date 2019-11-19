@@ -8,4 +8,4 @@ json.array! @books do |book|
   json.chapter book.chapter
 end
 
-json.array! [@books.total_pages]
+json.array! [@total_pages]

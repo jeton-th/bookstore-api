@@ -8,6 +8,7 @@ module Api
 
       def index
         @books = @current_user.books.paginate_results(params[:page])
+        @total_pages = @books.total_pages
       end
 
       def create
