@@ -1,4 +1,4 @@
 # frozen_string_literal: true
 
-response = { status: 500 }
+response = { error: 'Email is associated with an existing account.' }
 json.response response
