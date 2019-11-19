@@ -35,7 +35,7 @@ Run `bundle install` to install all project dependencies.
 ### Configuring database
 In order to set up the database run the following command:
 ```
-rails db:create db:migrate db:seed
+rails db:create db:migrate
 ```
 
 ### Serve Project
